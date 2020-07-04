@@ -1,0 +1,303 @@
+/************ common ************/
+html,
+body,
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: slategray !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: slategray !important;
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+    color: slategrey;
+    margin-top: 40px;
+    user-select: none;
+}
+
+.button {
+    width: 75px;
+    height: 34px;
+    border-radius: 10px;
+    background-color: rgb(178, 206, 206);
+    font-size: 12px;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 34px;
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+/********* slide-1 ***********/
+.slide-1 {
+    background-color: antiquewhite;
+}
+
+.input-container {
+    margin: 0 auto;
+    width: 350px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#expression-input {
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    height: 34px;
+    width: 240px;
+    padding: 5px 15px;
+}
+
+.window-container {
+    margin: 50px auto;
+    width: 1300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.window-container-1 .window {
+    width: 360px;
+    height: 480px;
+    background: #f9f4dc;
+    padding: 35px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.window-container-1 .window-tip {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rosybrown;
+    user-select: none;
+}
+
+.table-container {
+    /* overflow: auto; */
+    max-height: 430px;
+    max-width: 320px;
+}
+
+.table {
+    width: 320px;
+    height: 430px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-spacing: 0;
+}
+
+.table thead {
+    overflow: hidden;
+}
+
+.table thead th {
+    line-height: 40px;
+    height: 40px;
+    min-width: 40px;
+    border: 1px solid #c0c0c0;
+    border-bottom: 3px solid #ccc;
+}
+
+.table tbody td {
+    text-align: center;
+    border: .8px solid #c0c0c0;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 !important;
+    min-width: 40px;
+    vertical-align: middle;
+}
+
+.core {
+    color: blueviolet;
+}
+
+.start {
+    color: rgb(51, 139, 51);
+}
+
+.end {
+    background-color: coral;
+}
+
+
+/********* slide-2 ***********/
+
+.slide-2 {
+    background-color: #CCFFFF;
+}
+
+.inputfile-container {
+    width: 100%;
+    text-align: center;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: #99CCFF;
+    border: 1px solid #99CCFF;
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.inputfile:focus+label,
+.inputfile+label:hover {
+    background-color: rgba(0, 102, 204, 0.596);
+    color: #CCFFFF;
+
+}
+
+.window-container-2 {
+    flex-wrap: wrap;
+}
+
+.window-container-2 .window {
+    width: 50%;
+    height: 220px;
+    border: 1px solid #0066CC;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+    max-height: 220px;
+}
+
+.window-container-2 .window-tip,
+.window-container-3 .window-tip {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #0066CC;
+    user-select: none;
+}
+
+.window-container-2 .window-text {
+    font-size: 20px;
+    margin: 30px 40px;
+    color: #0066CC;
+    text-align: center;
+}
+
+.window-container-2 .window-text li {
+    line-height: 44px;
+}
+
+.first-follow,
+.analysisTable,
+.process {
+    max-width: 100%;
+}
+
+.process {
+    max-height: 100%;
+}
+
+.first-follow .table,
+.analysisTable .table,
+.process .table {
+    width: auto;
+    border: 1px solid #0066CC;
+    margin: 40px 35px;
+    max-height: 45%;
+}
+
+.analysisTable .table,
+.process .table {
+    max-height: 100%;
+}
+
+.first-follow .table-row,
+.analysisTable .table-row,
+.process .table-row {
+    height: 40px;
+    line-height: 40px;
+}
+
+.first-follow .table-cell,
+.analysisTable .table-cell,
+.process .table-cell {
+    border: 1px solid #0066CC;
+    color: #0066CC;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.first-follow .table-cell-first,
+.analysisTable .table-cell-first{
+    width: 80px;
+}
+
+.inputfile-sentence {
+    margin-top: 70px;
+}
+
+.bottom-tip {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    color: cadetblue;
+    user-select: none;
+}
+
+.window-container-3 .window {
+    width: 50%;
+    height: 550px;
+    border: 1px solid #0066CC;
+    box-sizing: border-box;
+    position: relative;
+    overflow: auto;
+}
+
+#isMatchLL1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+#isMatchLL1.success {
+    color: green;
+}
+
+#isMatchLL1.error {
+    color: crimson;
+}
+
+/********* slide-3 ***********/
+
+.slide-3 {
+    background-color: snow;
+}

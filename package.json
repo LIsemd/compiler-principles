@@ -1,0 +1,23 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "正规式 -----> NFA -----> DFA -----> MinDFA",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack-cli": "^3.3.11"
+  }
+}

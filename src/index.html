@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>编译原理实验</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./utils/swiper.min.css">
+</head>
+
+<body>
+    <!-- 水平Swiper -->
+    <div class="swiper-container swiper-container-h">
+        <div class="swiper-wrapper">
+            <!--  swiper-no-swiping -->
+            <div class="swiper-slide slide-1">
+                <p class="title">实验一： 正规式 --- NFA --- DFA --- 最小DFA</p>
+                <div class="input-container">
+                    <input placeholder="请输入正规式" id="expression-input" value="(a*|b*)*" />
+                    <div class="button" id="expression-btn">开始分析</div>
+                </div>
+                <div class="window-container window-container-1">
+                    <div class="window">
+                        <span class="window-tip">
+                            NFA
+                        </span>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr id="nfa-table-header">
+                                    </tr>
+                                </thead>
+                                <tbody id="nfa-table-main">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="window">
+                        <span class="window-tip">
+                            DFA
+                        </span>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr id="dfa-table-header">
+                                    </tr>
+                                </thead>
+                                <tbody id="dfa-table-main">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="window">
+                        <span class="window-tip">
+                            最小 DFA
+                        </span>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr id="min-dfa-table-header">
+                                    </tr>
+                                </thead>
+                                <tbody id="min-dfa-table-main">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-2">
+                <!-- 垂直Swiper -->
+                <div class="swiper-container swiper-container-v">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="title">实验二： LL(1)语法分析器的实现</p>
+                            <div class="inputfile-container">
+                                <input type="file" accept=".txt" name="file-cfg" id="file-cfg" class="inputfile" />
+                                <label for="file-cfg" id="input-label-cfg">选择 CFG 文法文件</label>
+                            </div>
+                            <div class="window-container window-container-2">
+                                <div class="window">
+                                    <span class="window-tip">
+                                        输入文法
+                                    </span>
+                                    <ul class="window-text" id="input-grammar">
+                                    </ul>
+                                </div>
+                                <div class="window">
+                                    <span class="window-tip">
+                                        消除左递归
+                                    </span>
+                                    <ul class="window-text" id="output-grammar-1">
+                                    </ul>
+                                </div>
+                                <div class="window">
+                                    <span class="window-tip">
+                                        提取左因子
+                                    </span>
+                                    <ul class="window-text" id="output-grammar-2">
+                                    </ul>
+                                </div>
+                                <div class="window">
+                                    <span class="window-tip">
+                                        FIRST 和 FOLLOW 集
+                                    </span>
+                                    <div class="table-container first-follow">
+                                        <table class="table">
+                                            <thead>
+                                                <tr id="ff-table-header">
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ff-table-main">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="bottom-tip">滑动鼠标,查看后续结果 ⬇⬇⬇</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="inputfile-container inputfile-sentence">
+                                <input type="file" accept=".txt" name="file-sentence" id="file-sentence" class="inputfile" />
+                                <label for="file-sentence" id="input-label-sentence">选择输入语句文件</label>
+                            </div>
+                            <div class="window-container window-container-3">
+                                <div class="window">
+                                    <span class="window-tip">
+                                        预测分析表
+                                    </span>
+                                    <div class="table-container analysisTable">
+                                        <table class="table">
+                                            <thead>
+                                                <tr id="analysis-table-header">
+                                                </tr>
+                                            </thead>
+                                            <tbody id="analysis-table-main">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <span id="isMatchLL1"></span>
+                                </div>
+                                <div class="window">
+                                    <span class="window-tip">
+                                        分析过程
+                                    </span>
+                                    <div class="table-container process">
+                                        <table class="table">
+                                            <thead>
+                                                <tr id="process-table-header">
+                                                </tr>
+                                            </thead>
+                                            <tbody id="process-table-main">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide-3">
+                <p class="title">实验三：LR语法分析器</p>
+                <div class="inputfile-container">
+                    <input type="file" accept=".txt" name="file-cfg2" id="file-cfg2" class="inputfile" />
+                    <label for="file-cfg2" id="input-label-cfg2">选择 CFG 文法文件</label>
+                </div>
+                <div class="window-container window-container-2">
+                    <div class="window">
+                        <span class="window-tip">
+                            输入文法
+                        </span>
+                        <ul class="window-text" id="input-grammar-2">
+                        </ul>
+                    </div>
+                    <div class="window">
+                        <span class="window-tip">
+                            拓广文法
+                        </span>
+                        <ul class="window-text" id="extention-grammar">
+                        </ul>
+                    </div>
+                    <div class="window">
+                        <span class="window-tip">
+                            识别活前缀DFA
+                        </span>
+                        <div class="table-container first-follow">
+                            <table class="table">
+                                <thead>
+                                    <tr id="livePrefix-header">
+                                    </tr>
+                                </thead>
+                                <tbody id="livePrefix-main">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="window">
+                        <span class="window-tip">
+                            FIRST 和 FOLLOW 集
+                        </span>
+                        <div class="table-container first-follow">
+                            <table class="table">
+                                <thead>
+                                    <tr id="ff-table-header-2">
+                                    </tr>
+                                </thead>
+                                <tbody id="ff-table-main-2">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-h"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <script src="../dist/main.js"></script>
+    <script src="./utils/swiper.min.js"></script>
+    <script>
+        const swiper_h = new Swiper('.swiper-container-h', {
+            initialSlide: 2,
+            pagination: {
+                el: '.swiper-pagination-h',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+        const swiper_v = new Swiper('.swiper-container-v', {
+            direction: 'vertical',
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true
+        })
+        console.log('实验一：已通过的测试用例 (a*|b*)* 、(a|b)*a 、 (0|1)*011(0|1)* 、 ((ε|a)b*)*');
+    </script>
+</body>
+
+</html>

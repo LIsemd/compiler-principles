@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "lib": ["es2017","es6","dom"],
+        "module": "es6",
+        "target": "es6",
+    }
+}

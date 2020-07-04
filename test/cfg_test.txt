@@ -1,0 +1,4 @@
+S → A
+A → Ab | bBa
+B → aAc | ε
+
