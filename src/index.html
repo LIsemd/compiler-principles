@@ -222,7 +222,6 @@
     <script src="./utils/swiper.min.js"></script>
     <script>
         const swiper_h = new Swiper('.swiper-container-h', {
-            initialSlide: 2,
             pagination: {
                 el: '.swiper-pagination-h',
             },
@@ -237,7 +236,22 @@
             spaceBetween: 30,
             mousewheel: true
         })
-        console.log('实验一：已通过的测试用例 (a*|b*)* 、(a|b)*a 、 (0|1)*011(0|1)* 、 ((ε|a)b*)*');
+        console.log('实验一：已通过的测试用例: (a*|b*)* 、(a|b)*a 、 (0|1)*011(0|1)* 、 ((ε|a)b*)*');
+        console.log('');
+        console.log('实验二：已通过的测试用例: ');
+        console.log('CFG: A → Ab ;');
+        console.log('CFG: A → Aa | Ab | c | d ;');
+        console.log('CFG: S → Aa | b ; A → Ac | Sd | ε ;');
+        console.log('CFG: S → (T) | a+S | a ; T → T,S | S ;');
+        console.log('测试语句: aaa# ;');
+        console.log('测试语句: (a,(a,a)) ;');
+        console.log('测试语句: (a,(a,a)# ;');
+        console.log('测试语句: (a,(a,a))# ;');
+        console.log('');
+        console.log('实验三：已通过的测试用例: ');
+        console.log('CFG: S → A ; A → Ab | bBa ; B → aAc | ε ;');
+        console.log('CFG: S → A ; A → Ab | bBa ; B → aAc | a | aAb ;');
+        console.log('CFG: S → UTa | Tb ; T → S | Sc | d ; U → US | e ;');
     </script>
 </body>
 
